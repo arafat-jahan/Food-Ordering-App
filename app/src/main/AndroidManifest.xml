@@ -30,16 +30,18 @@
         <activity
             android:name=".Splash_Screen"
             android:exported="true">
+
         </activity>
 
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <!-- The intent-filter should be inside the MainActivity tag -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- The intent-filter should be inside the MainActivity tag -->
+
         </activity>
 
     </application>

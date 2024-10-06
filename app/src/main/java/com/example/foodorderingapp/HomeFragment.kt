@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
@@ -52,9 +53,20 @@ class HomeFragment : Fragment() {
                 Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()
             }
         })
+
+        // Set up the RecyclerView for popular items
+        val item = listOf("Burger", "Sandwich", "Momo", "Item")
+        val price = listOf("$5", "$7", "$8", "$10")
+        val popularFoodImages = listOf(
+            R.drawable.menu1, R.drawable.menu2, R.drawable.menu3, R.drawable.menu4
+        )
+
+        val adapter = PopularAdapter(item, price, popularFoodImages)
+        binding.PopulerRecylerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.PopulerRecylerView.adapter = adapter
     }
 
     companion object {
-        // If you don't need any functionality in the companion object, you can remove it.
+        // You can add static-like functionality here if needed
     }
 }

@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="25dp">
+    android:layout_margin="25dp"
+    android:background="@android:color/white">
 
     <androidx.cardview.widget.CardView
         android:layout_width="323dp"
         android:layout_height="87dp"
+        android:layout_marginTop="38dp"
+        android:elevation="8dp"
         app:cardCornerRadius="22dp"
+        app:cardElevation="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,38 +37,48 @@
 
             <TextView
                 android:id="@+id/foodNamePopuler"
-                android:layout_width="80dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="24dp"
                 android:text="Food Name"
                 android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/addToCartPopuler"
-                android:layout_width="80dp"
-                android:layout_height="21dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="4dp"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/addtocartshape"
                 android:gravity="center"
                 android:text="Add To Cart"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/pricePopuler"
+                app:layout_constraintHorizontal_bias="0.658"
                 app:layout_constraintStart_toStartOf="@+id/pricePopuler"
-                app:layout_constraintTop_toBottomOf="@+id/pricePopuler" />
+                app:layout_constraintTop_toBottomOf="@+id/pricePopuler"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/pricePopuler"
-                android:layout_width="75dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginEnd="24dp"
                 android:text="$5"
+                android:textColor="#12CB71"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.775"
                 app:layout_constraintStart_toEndOf="@+id/foodNamePopuler"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
